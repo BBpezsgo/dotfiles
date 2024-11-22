@@ -1,0 +1,232 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "bottom",
+
+	"modules-left": [
+		"hyprland/workspaces"
+	],
+	// "modules-center": [
+	//  "hyprland/window"
+	// ],
+	"modules-right": [
+        "group/audio",
+		"tray",
+		"group/connection",
+		"group/hardware",
+		"clock"
+	],
+
+	"group/connection": {
+		"orientation": "horizontal",
+		"modules": [
+            "network",
+            "bluetooth"
+		]
+	},
+
+	"group/hardware": {
+		"orientation": "horizontal",
+		"modules": [
+            "memory",
+            "cpu",
+            "systemd-failed-units"
+		]
+	},
+
+    "memory": {
+        "states": {
+            "1": 13,
+            "2": 25,
+            "3": 38,
+            "4": 50,
+            "5": 62,
+            "6": 75,
+            "7": 88,
+            "8": 100
+        },
+        "format": "{icon}",
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+        "tooltip-format": "RAM: {used:0.1f}/{total:0.1f} GiB\nSwap: {swapUsed:0.1f}/{swapTotal:0.1f} GiB"
+    },
+
+    "cpu": {
+        "interval": 1,
+        "format": "{icon0}{icon1}{icon2}{icon3}",
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ]
+    },
+
+    "systemd-failed-units": {
+        "hide-on-ok": true,
+        "format": "✖ {nr_failed}",
+        "system": true,
+        "user": false
+    },
+
+	"group/audio": {
+		"orientation": "horizontal",
+		"modules": [
+            "cava",
+            "pulseaudio",
+            "pulseaudio/slider"
+		]
+	},
+
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"format": "{name}"
+	},
+
+	"clock": {
+		"format": "{:%H:%M}",
+		"tooltip": true,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "format": {
+                "months": "<span color='#e0def4'><b>{}</b></span>",
+                "days": "<span color='#908caa'><b>{}</b></span>",
+                "weekdays": "<span color='#c4a7e7'><b>{}</b></span>",
+                "today": "<span background='#eb6f92' color='#191724'><b>{}</b></span>"
+            }
+        }
+	},
+
+    "bluetooth": {
+        "format": "\uf293",
+        "format-connected": "{device_alias} \uf293",
+        "format-connected-battery": "{device_alias} {device_battery_percentage}% \uf293",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
+
+    "cava": {
+        "framerate": 60,
+        "autosens": 0,
+        "sensitivity": 50,
+        "bars": 7,
+        "lower_cutoff_freq": 19,
+        "higher_cutoff_freq": 20000,
+        "method": "pipewire",
+        "source": "auto",
+        "stereo": false,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ]
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}\uf294",
+        "format-muted": "\uf6a9",
+        "format-icons": {
+            "headphone": "\uf025",
+            "hands-free": "\uf590",
+            "headset": "\uf590",
+            "phone": "\uf095",
+            "portable": "\uf095",
+            "car": "\uf1b9",
+            "default": [
+                "\uf027",
+                "\uf028"
+            ]
+        },
+        "scroll-step": 1,
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ],
+        "tooltip": false,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "\uf130",
+        "format-source-muted": "\uf131",
+        "scroll-step": 5,
+        "tooltip": true,
+        "tooltip-format": "\uf130 at {volume}%"
+    },
+
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+
+
+    "network": {
+        "tooltip": true,
+        "interval": 2,
+        "format-wifi": "{essid} ({signalStrength}%) \uf1eb",
+        "format-ethernet": "\uf796",
+        "format-linked": "(No IP) \uf796",
+        "format-disconnected": "Disconnected \uf00d",
+        "tooltip-format": "{ipaddr}/{cidr} via {gwaddr} on {ifname}"
+    },
+
+	"tray": {
+		"icon-size": 20
+	}
+}

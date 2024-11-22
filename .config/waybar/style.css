@@ -1,0 +1,193 @@
+/* #region ==== Rosé Pine colors ==== */
+
+@define-color base #191724;
+@define-color surface #1f1d2e;
+@define-color overlay #26233a;
+@define-color muted #6e6a86;
+@define-color subtle #908caa;
+@define-color text #e0def4;
+@define-color love #eb6f92;
+@define-color gold #f6c177;
+@define-color rose #ebbcba;
+@define-color pine #31748f;
+@define-color foam #9ccfd8;
+@define-color iris #c4a7e7;
+@define-color highlightLow #21202e;
+@define-color highlightMed #403d52;
+@define-color highlightHigh #524f67;
+
+/* #endregion */
+
+/* #region ==== Base ==== */
+
+* {
+	font-size: 14px;
+	font-family: monospace;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+	background: @base;
+	color: @text;
+}
+
+/* #endregion */
+
+/* #region ==== Groups ==== */
+
+#window,
+#workspaces,
+#clock,
+#audio,
+#connection,
+#tray,
+#hardware {
+	background: @overlay;
+	padding: 0 10px;
+    border-radius: 12px;
+}
+
+#clock,
+#connection,
+#tray,
+#hardware {
+    margin-left: 8px;
+}
+
+/* #endregion */
+
+/* #region ==== Audio ==== */
+
+#cava {
+    font-family: monospace;
+    color: @iris;
+    min-width: 55px;
+}
+
+#pulseaudio-slider {
+    color: @iris;
+    min-width: 100px;
+    padding: 4px;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 5px;
+    min-width: 10px;
+    border-radius: 0px;
+    background-color: @muted;
+    border: none;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 0px;
+    border-radius: 0px;
+    background-color: @iris;
+    border: none;
+    box-shadow: 0px 0px 0px 1px @iris;
+}
+
+#pulseaudio {
+    color: @iris;
+    min-width: 55px;
+}
+
+#pulseaudio.muted {
+    color: @love;
+}
+
+/* #endregion */
+
+/* #region ==== Network ==== */
+
+#network {
+    color: @foam;
+    margin-right: 4px;
+}
+
+#network.disconnected {
+    color: @love;
+}
+
+/* #endregion */
+
+/* #region ==== Bluetooth ==== */
+
+#bluetooth.on {
+    color: @foam;
+}
+
+#bluetooth.off {
+    color: @muted;
+}
+
+#bluetooth.disabled {
+    color: @love;
+}
+
+/* #endregion */
+
+/* #region ==== Workspaces ==== */
+
+#workspaces {
+	padding: inherit;
+}
+
+#workspaces button {
+	padding: 0 2px;
+	color: @text;
+    border-radius: 0px;
+	border: none;
+}
+
+#workspaces button.active,
+#workspaces button:hover.active {
+    box-shadow: inset 0 -3px @iris;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+	text-shadow: inherit;
+	background: unset;
+	border: none;
+	padding: 0 2px;
+}
+
+#workspaces button.urgent {
+    background-color: @love;
+}
+
+/* #endregion */
+
+/* #region ==== Hardware ==== */
+
+#cpu {
+    color: @foam;
+}
+
+#memory {
+    color: @foam;
+}
+
+/* #endregion */
+
+/* #region ==== Tooltip ==== */
+
+tooltip {
+    border-radius: 3px;
+    opacity: 1;
+    background-color: @overlay;
+    color: @text;
+}
+
+/* #endregion */
