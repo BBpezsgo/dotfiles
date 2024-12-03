@@ -8,6 +8,7 @@ fi
 alias ls='ls --hyperlink=auto --color=auto'
 alias grep='grep --color=auto'
 alias icat="kitten icat"
+alias shimnei='/home/BB/Shimnei/linux-shimeji/launch.sh'
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 

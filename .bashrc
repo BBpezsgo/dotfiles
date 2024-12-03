@@ -3,6 +3,7 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias shimnei='/home/BB/Shimnei/linux-shimeji/launch.sh'
 
 PS1='[\u@\h \W]\$ '
 

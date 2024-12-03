@@ -1,5 +1,6 @@
 *
 !*/
+/.cargo
 
 !/.gitignore
 !/.config/hypr/hyprland.conf
@@ -17,3 +18,4 @@
 !/.dir_colors
 !/.zshrc
 !/.p10k.zsh
+!/.vimrc

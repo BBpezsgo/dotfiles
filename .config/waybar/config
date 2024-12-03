@@ -13,6 +13,7 @@
 	"modules-right": [
         "group/audio",
 		"tray",
+        "privacy",
 		"group/connection",
 		"group/hardware",
 		"clock"
@@ -34,6 +35,39 @@
             "systemd-failed-units"
 		]
 	},
+
+	"group/audio": {
+		"orientation": "horizontal",
+		"modules": [
+            "cava",
+            "mpris",
+            "pulseaudio",
+            "pulseaudio/slider"
+		]
+	},
+
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 16,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ]
+    },
 
     "memory": {
         "states": {
@@ -82,15 +116,6 @@
         "user": false
     },
 
-	"group/audio": {
-		"orientation": "horizontal",
-		"modules": [
-            "cava",
-            "pulseaudio",
-            "pulseaudio/slider"
-		]
-	},
-
 	"hyprland/workspaces": {
 		"disable-scroll": true,
 		"format": "{name}"
@@ -125,8 +150,8 @@
     "cava": {
         "framerate": 60,
         "autosens": 0,
-        "sensitivity": 50,
-        "bars": 7,
+        "sensitivity": 75,
+        "bars": 14,
         "lower_cutoff_freq": 19,
         "higher_cutoff_freq": 20000,
         "method": "pipewire",
@@ -136,7 +161,7 @@
         "bar_delimiter": 0,
         "monstercat": false,
         "waves": false,
-        "noise_reduction": 0.77,
+        "noise_reduction": 0.30,
         "input_delay": 2,
         "format-icons": [
             "▁",
@@ -189,33 +214,6 @@
         "orientation": "horizontal"
     },
 
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-
-
     "network": {
         "tooltip": true,
         "interval": 2,
@@ -223,7 +221,14 @@
         "format-ethernet": "\uf796",
         "format-linked": "(No IP) \uf796",
         "format-disconnected": "Disconnected \uf00d",
-        "tooltip-format": "{ipaddr}/{cidr} via {gwaddr} on {ifname}"
+        "tooltip-format": "{ipaddr}/{cidr} via {gwaddr} on {ifname}\n{bandwidthUpBits} {bandwidthDownBits}"
+    },
+
+    "mpris": {
+        "format-playing": "\uf144",
+        "format-paused": "\uf28b",
+        "format-stopped": "\uf28d",
+        "format-tooltip": "{dynamic}"
     },
 
 	"tray": {
