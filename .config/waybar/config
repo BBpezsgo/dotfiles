@@ -1,50 +1,54 @@
 // -*- mode: json -*-
 
 {
-	"layer": "top",
-	"position": "bottom",
+    "layer": "top",
+    "position": "bottom",
 
-	"modules-left": [
-		"hyprland/workspaces"
-	],
-	// "modules-center": [
-	//  "hyprland/window"
-	// ],
-	"modules-right": [
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    // "modules-center": [
+    //  "hyprland/window"
+    // ],
+    "modules-right": [
         "group/audio",
-		"tray",
+        "tray",
         "privacy",
-		"group/connection",
-		"group/hardware",
-		"clock"
-	],
+        "group/connection",
+        "group/hardware",
+        "clock"
+    ],
 
-	"group/connection": {
-		"orientation": "horizontal",
-		"modules": [
+    "group/connection": {
+        "orientation": "horizontal",
+        "modules": [
             "network",
             "bluetooth"
-		]
-	},
+        ]
+    },
 
-	"group/hardware": {
-		"orientation": "horizontal",
-		"modules": [
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
             "memory",
             "cpu",
+            "temperature#0",
+            "temperature#1",
+            "temperature#2",
+            "temperature#3",
             "systemd-failed-units"
-		]
-	},
+        ]
+    },
 
-	"group/audio": {
-		"orientation": "horizontal",
-		"modules": [
+    "group/audio": {
+        "orientation": "horizontal",
+        "modules": [
             "cava",
             "mpris",
             "pulseaudio",
             "pulseaudio/slider"
-		]
-	},
+        ]
+    },
 
     "privacy": {
         "icon-spacing": 4,
@@ -116,14 +120,14 @@
         "user": false
     },
 
-	"hyprland/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	},
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "format": "{name}"
+    },
 
-	"clock": {
-		"format": "{:%H:%M}",
-		"tooltip": true,
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": true,
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
@@ -135,7 +139,7 @@
                 "today": "<span background='#eb6f92' color='#191724'><b>{}</b></span>"
             }
         }
-	},
+    },
 
     "bluetooth": {
         "format": "\uf293",
@@ -150,8 +154,8 @@
     "cava": {
         "framerate": 60,
         "autosens": 0,
-        "sensitivity": 75,
-        "bars": 14,
+        "sensitivity": 60,
+        "bars": 28,
         "lower_cutoff_freq": 19,
         "higher_cutoff_freq": 20000,
         "method": "pipewire",
@@ -161,7 +165,7 @@
         "bar_delimiter": 0,
         "monstercat": false,
         "waves": false,
-        "noise_reduction": 0.30,
+        "noise_reduction": 0.2,
         "input_delay": 2,
         "format-icons": [
             "▁",
@@ -231,7 +235,68 @@
         "format-tooltip": "{dynamic}"
     },
 
-	"tray": {
-		"icon-size": 20
-	}
+    "tray": {
+        "icon-size": 20
+    },
+
+    "temperature#0": {
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input",
+        "format": "{icon}",
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+        "tooltip-format": "Core 0: {temperatureC}°C"
+    },
+    "temperature#1": {
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp3_input",
+        "format": "{icon}",
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+        "tooltip-format": "Core 1: {temperatureC}°C"
+    },
+    "temperature#2": {
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp4_input",
+        "format": "{icon}",
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+        "tooltip-format": "Core 2: {temperatureC}°C"
+    },
+    "temperature#3": {
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp5_input",
+        "format": "{icon}",
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+        "tooltip-format": "Core 3: {temperatureC}°C"
+    }
 }

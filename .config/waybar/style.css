@@ -186,6 +186,14 @@ window#waybar {
     color: @foam;
 }
 
+#temperature.0 {
+    margin-left: 4px;
+}
+
+#temperature {
+    color: @love;
+}
+
 /* #endregion */
 
 /* #region ==== Tooltip ==== */
