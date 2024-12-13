@@ -56,6 +56,7 @@ nnoremap c d
 nnoremap C D
 vnoremap c d
 nnoremap x "_x
+set clipboard=unnamedplus
 
 " ======
 "   C#
