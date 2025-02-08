@@ -1,0 +1,64 @@
+# Fonts
+
+font = "/usr/share/fonts/noto/NotoSans-SemiBold.ttf"
+font-size = 16
+hint-font = false
+
+# Text theming
+
+text-color = #FFFFFF
+default-result-color = #6e6a86
+selection-color = #e0def4
+selection-match-color = #eb6f92
+
+# Text layout
+
+prompt-text = ""
+result-spacing = 0
+
+# Window theming
+
+width = 50%
+height = 50%
+
+background-color = #191724
+outline-width = 0
+border-width = 4
+border-color = #1f1d2e
+corner-radius = 6
+
+padding-top = 8
+padding-bottom = 8
+padding-left = 8
+padding-right = 8
+
+# Whether to clip text drawing to be within the specified padding. This
+# is mostly important for allowing text to be inset from the border,
+# while still allowing text backgrounds to reach right to the edge.
+clip-to-padding = true
+
+# Whether to scale the window by the output's scale factor.
+scale = true
+
+# Behaviour
+
+hide-cursor = false
+
+history = true
+
+# Specify an alternate file to read and store history information
+# from / to. This shouldn't normally be needed, and is intended to
+# facilitate the creation of custom modes.
+# history-file = /path/to/histfile
+
+# Select the matching algorithm used. If normal, substring matching is
+# used, weighted to favour matches closer to the beginning of the
+# string. If prefix, only substrings at the beginning of the string are
+# matched. If fuzzy, searching is performed via a simple fuzzy matching
+# algorithm.
+#
+# Supported values: normal, prefix, fuzzy
+matching-algorithm = fuzzy
+
+late-keyboard-init = false
+ascii-input = true

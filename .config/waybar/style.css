@@ -43,7 +43,7 @@ window#waybar {
 #connection,
 #tray,
 #hardware,
-#privacy {
+#notifications {
 	background: @overlay;
 	padding: 0 10px;
     border-radius: 12px;
@@ -54,7 +54,7 @@ window#waybar {
 #connection,
 #tray,
 #hardware,
-#privacy {
+#notifications {
     margin-left: 8px;
 }
 
@@ -206,3 +206,8 @@ tooltip {
 }
 
 /* #endregion */
+
+#custom-pacman {
+    margin-left: 4px;
+    margin-right: 4px;
+}

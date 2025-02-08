@@ -5,6 +5,7 @@
 !/.gitignore
 !/.config/hypr/hyprland.conf
 !/.config/hypr/show-clipboard-history.sh
+!/.config/hypr/show-unicode.sh
 !/.config/kew/kewrc
 !/.config/kitty/current-theme.conf
 !/.config/kitty/kitty.conf
@@ -14,10 +15,11 @@
 !/.config/ranger/rc.conf
 !/.config/waybar/config
 !/.config/waybar/style.css
-!/.config/wofi/style.css
+!/.config/tofi/config
 !/.bashrc
 !/.dir_colors
 !/.zshrc
 !/.p10k.zsh
 !/.vimrc
+!/packages-*.txt
 !/update_mirrors.sh

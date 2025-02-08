@@ -3,7 +3,7 @@ coverEnabled=1
 coverAnsi=0
 visualizerEnabled=1
 visualizerHeight=5
-useProfileColors=0
+useConfigColors=0
 allowNotifications=1
 hideLogo=0
 hideHelp=0
@@ -49,10 +49,10 @@ addToMainPlaylist=.
 updateLibrary=u
 
 # The different main views, normally F2-F6:
-showPlaylistAlt=
-showLibraryAlt=
-showTrackAlt=
-showSearchAlt=
-showKeysAlt=
+showPlaylistAlt=Z
+showLibraryAlt=X
+showTrackAlt=C
+showSearchAlt=V
+showKeysAlt=B
 
 quit=q

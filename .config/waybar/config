@@ -13,11 +13,19 @@
     "modules-right": [
         "group/audio",
         "tray",
-        "privacy",
+        "group/notifications",
         "group/connection",
         "group/hardware",
         "clock"
     ],
+
+    "group/notifications": {
+        "orientation": "horizontal",
+        "modules": [
+            "privacy",
+            "custom/pacman"
+        ]
+    },
 
     "group/connection": {
         "orientation": "horizontal",
@@ -127,6 +135,7 @@
 
     "clock": {
         "format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
         "tooltip": true,
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
@@ -298,5 +307,12 @@
             "█"
         ],
         "tooltip-format": "Core 3: {temperatureC}°C"
+    },
+
+    "custom/pacman": {
+        "format": "\uf2f1",
+        "tooltip-format": "{}",
+        "exec": "checkupdates | wc -l",
+        "signal": 8
     }
 }
