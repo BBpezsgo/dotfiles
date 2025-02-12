@@ -16,6 +16,8 @@
 !/.config/waybar/config
 !/.config/waybar/style.css
 !/.config/tofi/config
+!/.config/gtk-3.0/**/*
+!/.config/gtk-4.0/**/*
 !/.bashrc
 !/.dir_colors
 !/.zshrc
