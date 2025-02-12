@@ -2,10 +2,12 @@
 
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
+    "reload_style_on_change": true,
 
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "wlr/taskbar"
     ],
     // "modules-center": [
     //  "hyprland/window"
@@ -53,9 +55,18 @@
         "modules": [
             "cava",
             "mpris",
-            "pulseaudio",
-            "pulseaudio/slider"
+            "pulseaudio#output",
+            "pulseaudio/slider#output",
+            "pulseaudio#input"
         ]
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
     },
 
     "privacy": {
@@ -188,10 +199,10 @@
         ]
     },
 
-    "pulseaudio": {
+    "pulseaudio#output": {
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}\uf294",
-        "format-muted": "\uf6a9",
+        "format-muted": "{volume}% \uf6a9",
         "format-icons": {
             "headphone": "\uf025",
             "hands-free": "\uf590",
@@ -204,24 +215,20 @@
                 "\uf028"
             ]
         },
-        "scroll-step": 1,
-        "ignored-sinks": [
-            "Easy Effects Sink"
-        ],
-        "tooltip": false,
+        "tooltip": true,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
 
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
+    "pulseaudio#input": {
+        "format": "{source_volume}% {format_source}",
         "format-source": "\uf130",
         "format-source-muted": "\uf131",
-        "scroll-step": 5,
         "tooltip": true,
-        "tooltip-format": "\uf130 at {volume}%"
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     },
 
-    "pulseaudio/slider": {
+    "pulseaudio/slider#output": {
+        "target": "sink",
         "min": 0,
         "max": 100,
         "orientation": "horizontal"
@@ -311,7 +318,7 @@
 
     "custom/pacman": {
         "format": "\uf2f1",
-        "tooltip-format": "{}",
+        "tooltip-format": "Pending Updates: {}",
         "exec": "checkupdates | wc -l",
         "signal": 8
     }

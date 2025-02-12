@@ -43,10 +43,13 @@ window#waybar {
 #connection,
 #tray,
 #hardware,
-#notifications {
-	background: @overlay;
-	padding: 0 10px;
-    border-radius: 12px;
+#notifications,
+#taskbar {
+    background: transparent;
+	border: 2px solid @overlay;
+    border-top: none;
+	padding: 0px 10px 2px 10px;
+    border-radius: 0px 0px 12px 12px;
     margin: 0px;
 }
 
@@ -54,8 +57,18 @@ window#waybar {
 #connection,
 #tray,
 #hardware,
-#notifications {
+#notifications,
+#taskbar {
     margin-left: 8px;
+}
+
+/* #endregion */
+
+/* #region ==== Clock ==== */
+
+#clock {
+    border-right: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 /* #endregion */
@@ -108,7 +121,11 @@ window#waybar {
     min-width: 55px;
 }
 
-#pulseaudio.muted {
+#pulseaudio.output.muted {
+    color: @love;
+}
+
+#pulseaudio.input.source-muted {
     color: @love;
 }
 
@@ -147,10 +164,13 @@ window#waybar {
 
 #workspaces {
 	padding: inherit;
+
+    border-left: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 #workspaces button {
-	padding: 0 4px;
+	padding: 0px 4px;
 	color: @text;
     border-radius: 12px;
 	border: none;
@@ -158,20 +178,45 @@ window#waybar {
 
 #workspaces button.active,
 #workspaces button:hover.active {
-    background-color: @highlightMed;
+    background-color: @overlay;
     font-weight: bold;
 }
 
 #workspaces button:hover {
+    background: @surface;
     box-shadow: inherit;
 	text-shadow: inherit;
-	background: unset;
 	border: none;
-	padding: 0 4px;
+	padding: 0px 4px;
 }
 
 #workspaces button.urgent {
     background-color: @love;
+}
+
+/* #endregion */
+
+/* #region ==== Taskbar ==== */
+
+#taskbar {
+	padding: inherit;
+}
+
+#taskbar button {
+	padding: 0px 4px;
+	color: @text;
+    border-radius: 12px;
+	border: none;
+}
+
+#taskbar button.active,
+#taskbar button:hover.active {
+    background: @overlay;
+}
+
+#taskbar button:hover {
+    background: @surface;
+    box-shadow: inherit;
 }
 
 /* #endregion */
@@ -183,7 +228,8 @@ window#waybar {
 }
 
 #memory {
-    color: @foam;
+    color: @iris;
+    margin-right: 4px;
 }
 
 #temperature.0 {
@@ -201,7 +247,8 @@ window#waybar {
 tooltip {
     border-radius: 3px;
     opacity: 1;
-    background-color: @overlay;
+    background-color: @base;
+    border: 2px solid @overlay;
     color: @text;
 }
 
