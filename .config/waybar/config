@@ -165,8 +165,8 @@
         "format": "\uf293",
         "format-connected": "{device_alias} \uf293",
         "format-connected-battery": "{device_alias} {device_battery_percentage}% \uf293",
-        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n{num_connections} connected\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
     },
@@ -333,8 +333,8 @@
 
     "custom/pacman": {
         "format": "\uf2f1",
-        "tooltip-format": "Pending Updates: {}",
-        "exec": "checkupdates | wc -l",
+        "tooltip-format": "Pending updates: {}",
+        "exec": "a=$(checkupdates | wc -l);if [[ $a -eq 0 ]]; then echo \"\"; else echo $a; fi",
         "signal": 8
     },
 
