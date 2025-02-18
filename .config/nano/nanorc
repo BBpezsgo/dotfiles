@@ -219,17 +219,12 @@ set trimblanks
 
 ## Paint the interface elements of nano.  These are examples; there are
 ## no colors by default, except for errorcolor and spotlightcolor.
-set titlecolor white,grey
-# set promptcolor lightwhite,grey
-# set statuscolor bold,white,green
-# set errorcolor bold,white,red
-# set spotlightcolor black,lightyellow
-# set selectedcolor lightwhite,magenta
-# set stripecolor ,#444
-set scrollercolor grey
-set numbercolor white,grey
-# set keycolor cyan
-# set functioncolor green
+set titlecolor grey,black
+set selectedcolor ,magenta
+set scrollercolor grey,black
+set numbercolor grey,black
+set keycolor magenta
+set functioncolor gray
 
 ## In root's .nanorc you might want to use:
 # set titlecolor bold,white,magenta

@@ -13,8 +13,7 @@
 !/.config/mako/config
 !/.config/nano/nanorc
 !/.config/ranger/rc.conf
-!/.config/waybar/config
-!/.config/waybar/style.css
+!/.config/waybar/**/*
 !/.config/tofi/config
 !/.config/gtk-3.0/**/*
 !/.config/gtk-4.0/**/*
@@ -25,3 +24,4 @@
 !/.vimrc
 !/packages-*.txt
 !/update_mirrors.sh
+!/scripts/**/*

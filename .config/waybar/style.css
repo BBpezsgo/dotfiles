@@ -28,7 +28,7 @@
 }
 
 window#waybar {
-	background: @base;
+	background: transparent;
 	color: @text;
 }
 
@@ -46,20 +46,7 @@ window#waybar {
 #notifications,
 #taskbar {
     background: transparent;
-	border: 2px solid @overlay;
-    border-top: none;
-	padding: 0px 10px 2px 10px;
-    border-radius: 0px 0px 12px 12px;
-    margin: 0px;
-}
-
-#clock,
-#connection,
-#tray,
-#hardware,
-#notifications,
-#taskbar {
-    margin-left: 8px;
+	padding: 2px 4px;
 }
 
 /* #endregion */
@@ -69,6 +56,7 @@ window#waybar {
 #clock {
     border-right: 0px;
     border-bottom-right-radius: 0px;
+    min-width: 100px;
 }
 
 /* #endregion */
@@ -82,13 +70,13 @@ window#waybar {
 #cava {
     font-family: monospace;
     color: @iris;
-    margin-right: 4px;
+    margin-right: 8px;
 }
 
 #pulseaudio-slider {
     color: @iris;
     min-width: 100px;
-    padding: 4px;
+    padding: 0px 4px;
 }
 
 #pulseaudio-slider slider {
@@ -101,19 +89,19 @@ window#waybar {
 }
 
 #pulseaudio-slider trough {
-    min-height: 5px;
+    min-height: 6px;
     min-width: 10px;
-    border-radius: 0px;
-    background-color: @muted;
+    background-color: @overlay;
     border: none;
+    border-radius: 5px;
 }
 
 #pulseaudio-slider highlight {
     min-width: 0px;
-    border-radius: 0px;
     background-color: @iris;
     border: none;
-    box-shadow: 0px 0px 0px 1px @iris;
+    box-shadow: none;
+    border-radius: 5px;
 }
 
 #pulseaudio {
@@ -142,6 +130,12 @@ window#waybar {
     color: @love;
 }
 
+#custom-network-used-by {
+    color: @foam;
+    margin-right: 6px;
+    font-weight: bold;
+}
+
 /* #endregion */
 
 /* #region ==== Bluetooth ==== */
@@ -164,7 +158,7 @@ window#waybar {
 
 #workspaces {
 	padding: inherit;
-
+    margin-right: 8px;
     border-left: 0px;
     border-bottom-left-radius: 0px;
 }
@@ -174,16 +168,16 @@ window#waybar {
 	color: @text;
     border-radius: 12px;
 	border: none;
+    font-weight: bold;
 }
 
 #workspaces button.active,
 #workspaces button:hover.active {
     background-color: @overlay;
-    font-weight: bold;
 }
 
 #workspaces button:hover {
-    background: @surface;
+    background: @overlay;
     box-shadow: inherit;
 	text-shadow: inherit;
 	border: none;
@@ -192,31 +186,6 @@ window#waybar {
 
 #workspaces button.urgent {
     background-color: @love;
-}
-
-/* #endregion */
-
-/* #region ==== Taskbar ==== */
-
-#taskbar {
-	padding: inherit;
-}
-
-#taskbar button {
-	padding: 0px 4px;
-	color: @text;
-    border-radius: 12px;
-	border: none;
-}
-
-#taskbar button.active,
-#taskbar button:hover.active {
-    background: @overlay;
-}
-
-#taskbar button:hover {
-    background: @surface;
-    box-shadow: inherit;
 }
 
 /* #endregion */
@@ -232,12 +201,12 @@ window#waybar {
     margin-right: 4px;
 }
 
-#temperature.0 {
-    margin-left: 4px;
-}
-
 #temperature {
     color: @love;
+}
+
+#temperature.0 {
+    margin-left: 4px;
 }
 
 /* #endregion */
@@ -256,5 +225,18 @@ tooltip {
 
 #custom-pacman {
     margin-left: 4px;
+    margin-right: 4px;
+}
+
+#privacy-item.audio-in {
+    color: @iris;
+}
+
+#privacy-item.audio-out {
+    color: @iris;
+}
+
+#custom-camera {
+    color: @iris;
     margin-right: 4px;
 }
