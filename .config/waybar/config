@@ -245,11 +245,12 @@
     "network": {
         "tooltip": true,
         "interval": 2,
-        "format-wifi": "{essid} ({signalStrength}%) \uf1eb",
+        "format-wifi": "\uf1eb",
         "format-ethernet": "\uf796",
         "format-linked": "(No IP) \uf796",
         "format-disconnected": "Disconnected \uf00d",
-        "tooltip-format": "{ipaddr}/{cidr} via {gwaddr} on {ifname}\n{bandwidthUpBits} {bandwidthDownBits}"
+        "tooltip-format": "{ipaddr}/{cidr} via {gwaddr} on {ifname}\n{bandwidthUpBits} {bandwidthDownBits}",
+        "tooltip-format-wifi": "{ipaddr}/{cidr} via {gwaddr} on {ifname}\n{essid} ({signalStrength}%)\n{bandwidthUpBits} {bandwidthDownBits}"
     },
 
     "mpris": {
