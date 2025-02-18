@@ -25,3 +25,4 @@
 !/packages-*.txt
 !/update_mirrors.sh
 !/scripts/**/*
+!/.vscode/settings.json
