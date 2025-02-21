@@ -6,7 +6,7 @@ hint-font = false
 
 # Text theming
 
-text-color = #FFFFF
+text-color = #e0def4
 default-result-color = #6e6a86
 selection-color = #e0def4
 selection-match-color = #eb6f92
