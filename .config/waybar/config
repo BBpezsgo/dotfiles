@@ -367,6 +367,30 @@
         "signal": 8
     },
 
+    "battery": {
+        "bat": "BAT0",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "tooltip-format": "Capacity: {capacity}%\nPower draw: {power} Watts\nTime: {time}\nCycles: {cycles}\nHealth: {health}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}",
+        "format-icons": ["", ""]
+    },
+    "backlight/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal",
+        "device": "intel_backlight"
+    },
+
     "custom/camera": {
         "exec": "/home/BB/.config/waybar/modules/camera.sh",
         "return-type": "json",
