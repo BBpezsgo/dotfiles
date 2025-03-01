@@ -67,6 +67,11 @@ window#waybar {
     color: @iris;
 }
 
+#cava.source {
+    font-family: monospace;
+    color: @pine;
+}
+
 #cava {
     font-family: monospace;
     color: @iris;
@@ -239,4 +244,14 @@ tooltip {
 #custom-camera {
     color: @iris;
     margin-right: 4px;
+}
+
+#tray {
+    padding: 0px;
+}
+
+#tray menu {
+    background: @base;
+    color: @text;
+    border: 2px solid @overlay;
 }
