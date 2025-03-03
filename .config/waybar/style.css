@@ -21,15 +21,15 @@
 /* #region ==== Base ==== */
 
 * {
-	font-size: 14px;
-	font-family: monospace;
+    font-size: 14px;
+    font-family: monospace;
     padding: 0;
     margin: 0;
 }
 
 window#waybar {
-	background: transparent;
-	color: @text;
+    background: transparent;
+    color: @text;
 }
 
 /* #endregion */
@@ -46,7 +46,7 @@ window#waybar {
 #notifications,
 #taskbar {
     background: transparent;
-	padding: 2px 4px;
+    padding: 2px 4px;
 }
 
 /* #endregion */
@@ -172,35 +172,38 @@ window#waybar {
 /* #region ==== Workspaces ==== */
 
 #workspaces {
-	padding: inherit;
+    padding: inherit;
     margin-right: 8px;
     border-left: 0px;
     border-bottom-left-radius: 0px;
 }
 
 #workspaces button {
-	padding: 0px 4px;
-	color: @text;
+    padding: 0px 2px;
+    color: @muted;
     border-radius: 12px;
-	border: none;
+    border: none;
     font-weight: bold;
+    box-shadow: inherit;
+}
+
+#workspaces button label {
+    font-size: 10px;
 }
 
 #workspaces button.active,
 #workspaces button:hover.active {
-    background-color: @overlay;
+    color: @text;
 }
 
 #workspaces button:hover {
-    background: @overlay;
-    box-shadow: inherit;
-	text-shadow: inherit;
-	border: none;
-	padding: 0px 4px;
+    background: inherit;
+    text-shadow: inherit;
+    border: inherit;
 }
 
 #workspaces button.urgent {
-    background-color: @love;
+    color: @love;
 }
 
 /* #endregion */
