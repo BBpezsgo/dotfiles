@@ -150,7 +150,7 @@ window#waybar {
     color: @muted;
 }
 
-#bluetooth.on {
+#bluetooth.connected {
     color: @foam;
 }
 
