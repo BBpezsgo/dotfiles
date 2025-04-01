@@ -18,6 +18,7 @@ export LS_COLORS='rs=0:di=00;35:ln=04;35:mh=00:pi=45;30:so=45;30:do=45;30:bd=40;
 export PATH=$HOME/.local/bin:$HOME/.dotnet/tools:$PATH
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
+export VISUAL=nano
 
 HISTFILE=~/.histfile
 HISTSIZE=1000

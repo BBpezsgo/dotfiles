@@ -6,6 +6,8 @@
 !/.config/hypr/hyprland.conf
 !/.config/hypr/show-clipboard-history.sh
 !/.config/hypr/show-unicode.sh
+!/.config/hypr/show-emojis.sh
+!/.config/hypr/emojis.txt
 !/.config/kew/kewrc
 !/.config/kitty/current-theme.conf
 !/.config/kitty/kitty.conf
