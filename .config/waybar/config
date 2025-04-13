@@ -24,8 +24,7 @@
         "orientation": "horizontal",
         "modules": [
             "privacy",
-            "custom/camera",
-            "custom/pacman"
+            "custom/camera"
         ]
     },
 
