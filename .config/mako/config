@@ -28,3 +28,4 @@ group-by=category
 [category=translation]
 on-notify=none
 history=0
+max-icon-size=24

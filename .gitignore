@@ -4,7 +4,9 @@
 
 !/.gitignore
 !/.config/hypr/hyprland.conf
+!/.config/hypr/hyprlock.conf
 !/.config/hypr/hyprpaper.conf
+!/.config/hypr/ocr.sh
 !/.config/hypr/show-clipboard-history.sh
 !/.config/hypr/show-unicode.sh
 !/.config/hypr/show-emojis.sh
