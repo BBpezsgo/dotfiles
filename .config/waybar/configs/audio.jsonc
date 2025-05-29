@@ -1,0 +1,109 @@
+{
+    "group/audio": {
+        "orientation": "horizontal",
+        "modules": [
+            "mpris",
+            "pulseaudio",
+            "pulseaudio/slider"
+        ]
+    },
+
+    // Cava
+
+    "cava": {
+        "framerate": 60,
+        "autosens": 0,
+        "sensitivity": 60,
+        "bars": 16,
+        "lower_cutoff_freq": 19,
+        "higher_cutoff_freq": 20000,
+        "method": "pipewire",
+        "source": "auto",
+        "stereo": false,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.2,
+        "input_delay": 2,
+        "format-icons": [
+            " ",
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ]
+    },
+
+    "cava#source": {
+        "framerate": 60,
+        "autosens": 0,
+        "sensitivity": 60,
+        "bars": 16,
+        "lower_cutoff_freq": 19,
+        "higher_cutoff_freq": 20000,
+        "method": "pipewire",
+        "source": "audiorelay_source",
+        "stereo": false,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.2,
+        "input_delay": 2,
+        "format-icons": [
+            " ",
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ]
+    },
+
+    // Music
+
+    "mpris": {
+        "format-playing": "\udb80\udf86",
+        "format-paused": "\udb82\uded4",
+        "format-stopped": "\udb82\uded4",
+        "format-tooltip": "{dynamic}"
+    },
+
+    // Slider
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-bluetooth": "{icon}\uf294",
+        "format-muted": "\uf6a9",
+        "format-icons": {
+            "headphone": "\uf025",
+            "hands-free": "\uf590",
+            "headset": "\uf590",
+            "phone": "\uf095",
+            "portable": "\uf095",
+            "car": "\uf1b9",
+            "default": [
+                "\uf027",
+                "\uf028"
+            ]
+        },
+        "tooltip": true,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "pulseaudio/slider": {
+        "target": "sink",
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+
+}

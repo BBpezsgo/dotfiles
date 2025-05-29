@@ -1,0 +1,18 @@
+#custom-hardware-icon {
+    color: @iris;
+}
+
+#cpu {
+    color: @iris;
+    margin-right: 4px;
+}
+
+#memory {
+    color: @iris;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#temperature {
+    color: @love;
+}

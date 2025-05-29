@@ -1,0 +1,13 @@
+
+#privacy-item.audio-in {
+    color: @iris;
+}
+
+#privacy-item.audio-out {
+    color: @iris;
+}
+
+#custom-camera {
+    color: @iris;
+    margin-right: 4px;
+}

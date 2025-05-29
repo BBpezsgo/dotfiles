@@ -1,0 +1,11 @@
+
+#tray {
+    margin-right: 2px;
+}
+
+#tray menu {
+    background: @base;
+    color: @text;
+    border: 2px solid @overlay;
+    border-radius: 3px;
+}

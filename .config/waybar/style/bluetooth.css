@@ -1,0 +1,24 @@
+#bluetooth {
+    margin-right: 0px;
+    color: @subtle;
+}
+
+#bluetooth:hover {
+    color: @text;
+}
+
+#bluetooth.connected {
+    color: @iris;
+}
+
+#bluetooth.connected:hover {
+    color: @text;
+}
+
+#bluetooth.disabled {
+    color: @love;
+}
+
+#bluetooth.disabled:hover {
+    color: @text;
+}

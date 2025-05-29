@@ -1,0 +1,15 @@
+
+#network {
+    color: @iris;
+    margin-right: 4px;
+}
+
+#network.disconnected {
+    color: @love;
+}
+
+#custom-network-used-by {
+    color: @iris;
+    margin-right: 4px;
+    font-weight: bold;
+}

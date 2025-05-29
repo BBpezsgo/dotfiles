@@ -1,0 +1,45 @@
+{
+    "group/notifications": {
+        "orientation": "horizontal",
+        "modules": [
+            "tray",
+            "privacy",
+            "custom/camera"
+        ]
+    },
+
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 16,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 16
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 16
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 16
+            }
+        ]
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "show-passive-items": true,
+        "spacing": 2
+    },
+
+    "custom/camera": {
+        "exec": "/home/BB/.config/waybar/modules/camera.sh",
+        "return-type": "json",
+        "interval": 5
+    },
+}

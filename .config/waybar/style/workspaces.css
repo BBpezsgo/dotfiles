@@ -1,0 +1,31 @@
+#workspaces {
+    padding: inherit;
+}
+
+#workspaces button {
+    padding: 0px 2px;
+    color: @subtle;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    box-shadow: inherit;
+}
+
+#workspaces button label {
+    font-size: 12px;
+}
+
+#workspaces button.active,
+#workspaces button:hover.active {
+    color: @text;
+}
+
+#workspaces button:hover {
+    background: inherit;
+    text-shadow: inherit;
+    border: inherit;
+}
+
+#workspaces button.urgent {
+    color: @love;
+}

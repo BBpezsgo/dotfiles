@@ -1,0 +1,22 @@
+{
+    "group/backlight": {
+        "orientation": "horizontal",
+        "modules": [
+            "backlight",
+            "backlight/slider"
+        ]
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}",
+        "format-icons": ["", ""]
+    },
+
+    "backlight/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal",
+        "device": "intel_backlight"
+    },
+}
