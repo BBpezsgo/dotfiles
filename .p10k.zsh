@@ -98,10 +98,10 @@
     # disk_usage            # disk usage
     # ram                   # free RAM
     # swap                  # used swap
-    todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
-    timewarrior             # timewarrior tracking status (https://timewarrior.net/)
-    taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
-    per_directory_history   # Oh My Zsh per-directory-history local/global indicator
+    # todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
+    # timewarrior             # timewarrior tracking status (https://timewarrior.net/)
+    # taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
+    # per_directory_history   # Oh My Zsh per-directory-history local/global indicator
     # cpu_arch              # CPU architecture
     # time                    # current time
     # ip                    # ip address and bandwidth usage for a specified network interface
@@ -215,7 +215,7 @@
 
   ##################################[ dir: current directory ]##################################
   # Current directory background color.
-  typeset -g POWERLEVEL9K_DIR_BACKGROUND=240
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=235
   # Default current directory foreground color.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=253
   # If directory is too long, shorten some of its segments to the shortest possible unique
@@ -227,7 +227,7 @@
   typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=253
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=253
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=182
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -511,23 +511,23 @@
   # Status on success. No content, just an icon. No need to show it if prompt_char is enabled as
   # it will signify success by turning green.
   typeset -g POWERLEVEL9K_STATUS_OK=true
-  typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
+  typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION=''
   typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=250
-  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=237
+  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=235
 
   # Status when some part of a pipe command fails but the overall exit status is zero. It may look
   # like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE=true
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION='✔'
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION=''
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=250
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=237
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=235
 
   # Status when it's just an error code (e.g., '1'). No need to show it if prompt_char is enabled as
   # it will signify error by turning red.
   typeset -g POWERLEVEL9K_STATUS_ERROR=true
   typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION=''
   typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=161
-  typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=237
+  typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=235
 
   # Status when the last command was terminated by a signal.
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL=true
@@ -535,19 +535,19 @@
   typeset -g POWERLEVEL9K_STATUS_VERBOSE_SIGNAME=false
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_VISUAL_IDENTIFIER_EXPANSION=''
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND=161
-  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_BACKGROUND=237
+  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_BACKGROUND=235
 
   # Status when some part of a pipe command fails and the overall exit status is also non-zero.
   # It may look like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE=true
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_VISUAL_IDENTIFIER_EXPANSION=''
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_FOREGROUND=161
-  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_BACKGROUND=237
+  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_BACKGROUND=235
 
   ###################[ command_execution_time: duration of the last command ]###################
   # Execution time color.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=250
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=237
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=235
   # Show duration of the last command if takes at least this many seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
   # Show this many fractional digits. Zero means round to seconds.

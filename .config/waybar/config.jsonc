@@ -6,13 +6,11 @@
     "modules-left": [
         "hyprland/workspaces"
     ],
-    "modules-center": [
-        "clock"
-    ],
     "modules-right": [
         "group/audio",
         "group/notifications",
-        "group/hardware"
+        "group/hardware",
+        "clock"
     ],
 
 	"include": [

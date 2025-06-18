@@ -292,7 +292,7 @@ include /home/BB/.config/nano/syntax/*.nanorc
 # bind Sh-M-L "{nextword}{mark}{prevword}{execute}|sed 's/.*/\L&/'{enter}" main
 
 ## For copying a marked region to the system clipboard:
-# bind Sh-M-C "{execute}|xsel -ib{enter}{undo}" main
+bind Sh-M-C "{execute}|xsel -ib{enter}{undo}" main
 
 ## For normalizing Unicode to precomposed characters:
 # bind Sh-M-N "{execute}| uconv -x nfc {enter}" main
