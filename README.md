@@ -7,4 +7,3 @@
 - File manager: `yazi`
 - Status bar: `waybar` ([modified](https://github.com/BBpezsgo/Waybar))
 - Notification daemon: `mako`
-- Wallpaper: https://www.wallpaperflare.com/ultrawide-space-blue-nature-night-geology-dark-sky-beauty-in-nature-wallpaper-gez
