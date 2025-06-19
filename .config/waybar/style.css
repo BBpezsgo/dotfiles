@@ -35,8 +35,11 @@ tooltip {
 
 window#waybar > box > box > * > *:not(#workspaces) {
     background: transparent;
-    border-radius: 0px;
-    padding: 2px 6px;
+    padding: 1px 6px;
+    border: 1.5px solid @overlay;
+    border-radius: 11px;
+    margin-bottom: 2px;
+    margin-left: 4px;
 }
 
 /* Spacing between groups */

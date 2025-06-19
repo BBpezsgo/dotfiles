@@ -5,7 +5,8 @@
             "custom/network-used-by",
             "network",
             "bluetooth",
-            "memory"
+            "memory",
+            "custom/power"
         ]
     },
 
@@ -168,4 +169,12 @@
         "tooltip-format": "Capacity: {capacity}%\nPower draw: {power} Watts\nTime: {time}\nCycles: {cycles}\nHealth: {health}%",
         "format-icons": ["", "", "", "", ""]
     },
+
+    // Power
+
+	"custom/power": {
+		"format": "\uf011",
+        "tooltip-format": "",
+		"on-click": "/home/BB/.config/waybar/modules/power.sh"
+	},
 }

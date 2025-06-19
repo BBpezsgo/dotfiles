@@ -11,8 +11,17 @@
     color: @iris;
     margin-left: 4px;
     margin-right: 4px;
+    font-size: 0.7rem;
 }
 
 #temperature {
     color: @love;
+}
+
+#custom-power {
+    color: @love;
+}
+
+#custom-power:hover {
+    color: @text;
 }
