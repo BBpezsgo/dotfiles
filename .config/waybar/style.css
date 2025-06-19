@@ -40,11 +40,3 @@ window#waybar > box > box > * > *:not(#workspaces) {
 }
 
 /* Spacing between groups */
-
-#notifications {
-    margin-right: 4px;
-}
-
-#audio {
-    margin-right: 0px;
-}
