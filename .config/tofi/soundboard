@@ -1,0 +1,4 @@
+include = ./config
+
+# Behaviour
+history-file = /home/BB/.config/tofi/soundboard.history

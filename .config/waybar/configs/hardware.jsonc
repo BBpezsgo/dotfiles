@@ -6,7 +6,9 @@
             "network",
             "bluetooth",
             "memory",
-            "custom/power"
+            "group/group-power",
+            //"idle_inhibitor",
+            "systemd-failed-units"
         ]
     },
 
@@ -73,9 +75,9 @@
 
     "systemd-failed-units": {
         "hide-on-ok": true,
-        "format": "✖ {nr_failed}",
+        "format": "\ue654{nr_failed}",
         "system": true,
-        "user": false
+        "user": true
     },
 
     // CPU
@@ -172,9 +174,55 @@
 
     // Power
 
-	"custom/power": {
-		"format": "\uf011",
-        "tooltip-format": "",
-		"on-click": "/home/BB/.config/waybar/modules/power.sh"
-	},
+    "group/group-power": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 200,
+            "children-class": "not-power",
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "custom/lock",
+            "custom/power",
+            "custom/reboot",
+            "custom/quit",
+        ]
+    },
+
+    "custom/quit": {
+        "format": "󰗼",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+
+    "custom/reboot": {
+        "format": "\uead2",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+
+
+    "custom/lock": {
+        "format": "\uf023",
+        "tooltip": false,
+        "on-click": "hyprlock"
+    },
+    "custom/power": {
+        "format": "\uf011",
+        "tooltip": false,
+        "on-click": "shutdown now"
+    },
+
+    "custom/power-header": {
+        "format": "\udb81\udc27",
+        "tooltip": false
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "\uf06e",
+            "deactivated": "\uf070"
+        }
+    },
 }

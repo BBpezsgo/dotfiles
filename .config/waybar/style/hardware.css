@@ -18,10 +18,15 @@
     color: @love;
 }
 
-#custom-power {
-    color: @love;
+#idle_inhibitor {
+    margin-right: 4px;
+    min-width: 18px;
 }
 
-#custom-power:hover {
-    color: @text;
+#idle_inhibitor.activated {
+    color: @rose;
+}
+
+#systemd-failed-units {
+    color: @love;
 }

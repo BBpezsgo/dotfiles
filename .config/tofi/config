@@ -24,7 +24,7 @@ height = 50%
 background-color = #0a0a0e
 outline-width = 0
 border-width = 2
-border-color = #908caa
+border-color = #c4a7e7
 corner-radius = 6
 
 padding-top = 8

@@ -1,16 +1,10 @@
-#workspaces {
-    background: transparent;
-    border-radius: 0px;
-    padding: 0px;
-}
-
 #workspaces button {
     padding: 0px 2px;
     color: @subtle;
     border-radius: 12px;
     border: none;
     font-weight: bold;
-    box-shadow: inherit;
+    box-shadow: none;
 }
 
 #workspaces button label {
@@ -23,9 +17,8 @@
 }
 
 #workspaces button:hover {
-    background: inherit;
-    text-shadow: inherit;
-    border: inherit;
+    border: none;
+    background: unset;
 }
 
 #workspaces button.urgent {

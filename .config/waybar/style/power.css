@@ -1,0 +1,44 @@
+
+#custom-power-header {
+    color: @text;
+    margin-right: 4px;
+}
+
+#custom-power,
+#custom-reboot,
+#custom-lock,
+#custom-quit {
+    margin-right: 4px;
+}
+
+#custom-power {
+    color: @love;
+}
+
+#custom-power:hover {
+    color: @text;
+}
+
+#custom-reboot {
+    color: @love;
+}
+
+#custom-reboot:hover {
+    color: @text;
+}
+
+#custom-lock {
+    color: @subtle;
+}
+
+#custom-lock:hover {
+    color: @text;
+}
+
+#custom-quit {
+    color: @subtle;
+}
+
+#custom-quit:hover {
+    color: @text;
+}

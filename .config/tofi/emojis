@@ -1,0 +1,8 @@
+include = ./config
+
+# Font
+hint-font = false
+font = "NotoColorEmoji"
+
+# Behaviour
+history-file = /home/BB/.config/tofi/emojis.history

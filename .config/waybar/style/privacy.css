@@ -7,6 +7,10 @@
     color: @iris;
 }
 
+#privacy-item.screenshare {
+    color: @iris;
+}
+
 #custom-camera {
     color: @iris;
     margin-right: 4px;

@@ -6,5 +6,15 @@
     background: @base;
     color: @text;
     border: 2px solid @overlay;
-    border-radius: 3px;
+    border-radius: 11px;
+    padding: 6px;
+}
+
+#tray menu menuitem {
+    border-radius: 8px;
+    padding: 0px;
+}
+
+#tray menu separator {
+    background: @overlay;
 }

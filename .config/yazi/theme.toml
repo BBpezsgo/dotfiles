@@ -1,0 +1,383 @@
+# : Flavor {{{
+
+[flavor]
+dark  = ""
+light = ""
+
+# : }}}
+
+
+# : Manager {{{
+
+[mgr]
+cwd = { fg = "cyan" }
+
+# Hovered
+hovered         = { reversed = true }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "yellow", bold = true, italic = true, underline = true }
+find_position = { fg = "magenta", bg = "reset", bold = true, italic = true }
+
+# Symlink
+symlink_target = { italic = true }
+
+# Marker
+marker_copied   = { fg = "lightgreen",  bg = "lightgreen" }
+marker_cut      = { fg = "lightred",    bg = "lightred" }
+marker_marked   = { fg = "lightcyan",   bg = "lightcyan" }
+marker_selected = { fg = "lightyellow", bg = "lightyellow" }
+
+# Count
+count_copied   = { fg = "black", bg = "green" }
+count_cut      = { fg = "black", bg = "red" }
+count_selected = { fg = "black", bg = "yellow" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "gray" }
+
+# Highlighting
+syntect_theme = ""
+
+# : }}}
+
+
+# : Tabs {{{
+
+[tabs]
+active   = { bg = "blue", bold = true }
+inactive = { fg = "blue", bg = "gray" }
+
+# Separator
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+normal_main = { fg = "black", bg = "magenta", bold = true }
+normal_alt  = { fg = "magenta", bg = "black" }
+
+# Select mode
+select_main = { fg = "black", bg = "red", bold = true }
+select_alt  = { fg = "red", bg = "black" }
+
+# Unset mode
+unset_main = { fg = "black", bg = "red", bold = true }
+unset_alt  = { fg = "red", bg = "black" }
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+overall   = { }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+# Permissions
+perm_sep   = { fg = "darkgray" }
+perm_type  = { fg = "green" }
+perm_read  = { fg = "yellow" }
+perm_write = { fg = "red" }
+perm_exec  = { fg = "cyan" }
+
+# Progress
+progress_label  = { bold = true }
+progress_normal = { fg = "blue", bg = "black" }
+progress_error  = { fg = "red", bg = "black" }
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+cols            = 3
+mask            = { bg = "black" }
+cand            = { fg = "lightcyan" }
+rest            = { fg = "darkgray" }
+desc            = { fg = "lightmagenta" }
+separator       = "  "
+separator_style = { fg = "darkgray" }
+
+# : }}}
+
+
+# : Confirmation {{{
+
+[confirm]
+border     = { fg = "blue" }
+title      = { fg = "blue" }
+content    = {}
+list       = {}
+btn_yes    = { reversed = true }
+btn_no     = {}
+btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+
+# : }}}
+
+
+# : Spotter {{{
+
+[spot]
+border = { fg = "blue" }
+title  = { fg = "blue" }
+
+# Table
+tbl_col  = { fg = "blue" }
+tbl_cell = { fg = "yellow", reversed = true }
+
+# : }}}
+
+
+# : Notification {{{
+
+[notify]
+title_info  = { fg = "green" }
+title_warn  = { fg = "yellow" }
+title_error = { fg = "red" }
+
+# Icons
+icon_info  = ""
+icon_warn  = ""
+icon_error = ""
+
+# : }}}
+
+
+# : Picker {{{
+
+[pick]
+border   = { fg = "blue" }
+active   = { fg = "magenta", bold = true }
+inactive = {}
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "blue" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border   = { fg = "blue" }
+active   = { reversed = true }
+inactive = {}
+
+# Icons
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
+
+# : }}}
+
+
+# : Task manager {{{
+
+[tasks]
+border  = { fg = "blue" }
+title   = {}
+hovered = { fg = "magenta", underline = true }
+
+# : }}}
+
+
+# : Help menu {{{
+
+[help]
+on      = { fg = "cyan" }
+run     = { fg = "magenta" }
+desc    = {}
+hovered = { reversed = true, bold = true }
+footer  = { fg = "black", bg = "white" }
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+rules = [
+	# Images
+	{ mime = "image/*", fg = "yellow" },
+
+	# Media
+	{ mime = "{audio,video}/*", fg = "magenta" },
+
+	# Archives
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "red" },
+
+	# Documents
+	{ mime = "application/{pdf,doc,rtf}", fg = "cyan" },
+
+	# Empty files
+	# { mime = "inode/empty", fg = "red" },
+
+	# Special files
+	{ name = "*", is = "orphan", bg = "red" },
+	{ name = "*", is = "exec"  , fg = "green" },
+
+	# Dummy files
+	{ name = "*", is = "dummy", bg = "red" },
+	{ name = "*/", is = "dummy", bg = "red" },
+	{ name = "*.meta", fg = "darkgray" },
+
+	# Fallback
+	# { name = "*", fg = "white" },
+	{ name = "*/", fg = "blue" }
+]
+
+# : }}}
+
+
+# : Icons {{{
+
+[icon]
+globs = []
+dirs  = [
+]
+files = [
+    { name = "license", text = "󰿃" },
+    { name = "license.txt", text = "󰿃" },
+
+    { name = "makefile", text = "󰯂", fg = "#c1f12e" },
+]
+exts = [
+	{ name = "csv", text = "", fg = "#89e051" },
+	{ name = "dump", text = "", fg = "#dad8d8" },
+
+	{ name = "apk", text = "", fg = "#34a853" },
+	{ name = "jar", text = "", fg = "#cc3e44" },
+	{ name = "exe", text = "󰘔", fg = "#9f0500" },
+	{ name = "dll", text = "" },
+	{ name = "so", text = "" },
+
+	{ name = "bat", text = "󰯂", fg = "#c1f12e" },
+	{ name = "sh", text = "󰯂", fg = "#c1f12e" },
+
+	{ name = "ini", text = "", fg = "#6d8086" },
+	{ name = "conf", text = "", fg = "#6d8086" },
+	{ name = "config", text = "", fg = "#6d8086" },
+	{ name = "properties", text = "", fg = "#6d8086" },
+	{ name = "yaml", text = "", fg = "#6d8086" },
+	{ name = "yml", text = "", fg = "#6d8086" },
+	{ name = "toml", text = "", fg = "#9c4221" },
+
+	{ name = "json", text = "\ueb0f", fg = "#cbcb41" },
+	{ name = "json5", text = "\ueb0f", fg = "#cbcb41" },
+	{ name = "jsonc", text = "\ueb0f", fg = "#cbcb41" },
+
+	{ name = "lock", text = "", fg = "#bbbbbb" },
+
+	{ name = "fbx", text = "󰆧", fg = "#888888" },
+	{ name = "obj", text = "󰆧", fg = "#888888" },
+
+	{ name = "blend", text = "󰂫", fg = "#ea7600" },
+	{ name = "blend1", text = "󰂫", fg = "white" },
+	{ name = "xcf", text = "", fg = "#635b46" },
+	{ name = "unitypackage", text = "", fg = "white" },
+
+	{ name = "mkv", text = "", fg = "#00afff" },
+	{ name = "mov", text = "", fg = "#00afff" },
+	{ name = "mp4", text = "", fg = "#00afff" },
+
+	{ name = "mp3", text = "", fg = "#00afff" },
+	{ name = "ogg", text = "", fg = "#00afff" },
+	{ name = "wav", text = "", fg = "#00afff" },
+
+	{ name = "webp", text = "", fg = "magenta" },
+	{ name = "avif", text = "", fg = "magenta" },
+	{ name = "bmp", text = "", fg = "magenta" },
+	{ name = "gif", text = "", fg = "magenta" },
+	{ name = "ico", text = "", fg = "magenta" },
+	{ name = "jpeg", text = "", fg = "magenta" },
+	{ name = "jpg", text = "", fg = "magenta" },
+	{ name = "png", text = "", fg = "magenta" },
+	{ name = "svg", text = "", fg = "magenta" },
+	{ name = "ppm", text = "", fg = "magenta" },
+
+	{ name = "torrent", text = "", fg = "#44cda8" },
+	{ name = "magnet", text = "", fg = "#a51b16" },
+	
+    { name = "ttf", text = "", fg = "#ececec" },
+	{ name = "woff", text = "", fg = "#ececec" },
+	{ name = "woff2", text = "", fg = "#ececec" },
+	{ name = "otf", text = "", fg = "#ececec" },
+	
+	{ name = "xml", text = "󰗀", fg = "#e37933" },
+
+	{ name = "key", text = "󰌆", fg = "#e3c58e" },
+	{ name = "pub", text = "󰌆", fg = "#e3c58e" },
+
+	{ name = "txt", text = "󰈙" },
+	{ name = "log", text = "󰦪" },
+	{ name = "md", text = "" },
+
+	{ name = "pdf", text = "", fg = "#b30b00" },
+	{ name = "epub", text = "", fg = "#eab16d" },
+
+	{ name = "tgz", text = "󰛫" },
+	{ name = "7z", text = "󰛫" },
+	{ name = "bz", text = "󰛫" },
+	{ name = "bz2", text = "󰛫" },
+	{ name = "bz3", text = "󰛫" },
+	{ name = "gz", text = "󰛫" },
+	{ name = "rar", text = "󰛫" },
+	{ name = "xz", text = "󰛫" },
+	{ name = "zip", text = "󰛫" },
+	{ name = "zst", text = "󰛫" },
+
+	{ name = "db", text = "󰆼" },
+	{ name = "pdb", text = "󰆼" },
+	{ name = "bin", text = "" },
+
+	{ name = "java", text = "", fg = "#cc3e44" },
+	{ name = "html", text = "󰗀", fg = "#e37933" },
+	{ name = "hbs", text = "󰗀", fg = "#e37933" },
+	{ name = "py", text = "", fg = "#ffbc03" },
+	{ name = "cs", text = "", fg = "#903ba7" },
+	{ name = "csproj", text = "󰘐", fg = "#903ba7" },
+	{ name = "code-workspace", text = "󰘐", fg = "#23acf4" },
+	{ name = "sln", text = "󰘐", fg = "#903ba7" },
+	{ name = "js", text = "", fg = "#efd81c" },
+	{ name = "ts", text = "", fg = "#0076c7" },
+	{ name = "c", text = "", fg = "#599eff" },
+	{ name = "h", text = "", fg = "#599eff" },
+	{ name = "cpp", text = "", fg = "#599eff" },
+	{ name = "hpp", text = "", fg = "#599eff" },
+	{ name = "css", text = "", fg = "#663399" },
+]
+conds = [
+	# Special files
+	{ if = "orphan", text = "" },
+	{ if = "link", text = "" },
+	{ if = "block", text = "" },
+	{ if = "char", text = "" },
+	{ if = "fifo", text = "" },
+	{ if = "sock", text = "" },
+	{ if = "sticky", text = "" },
+	{ if = "dummy", text = "" },
+
+	# Fallback
+	{ if = "dir", text = "" },
+	{ if = "exec", text = "" },
+	{ if = "!dir", text = "" },
+]
+
+# : }}}
