@@ -11,6 +11,7 @@
 @import './style/tray.css';
 @import './style/hardware.css';
 @import './style/power.css';
+@import './style/notifications.css';
 
 * {
     font-size: 14px;
@@ -20,7 +21,7 @@
 }
 
 window#waybar {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 100%);
+    background: transparent;
     color: @text;
 }
 

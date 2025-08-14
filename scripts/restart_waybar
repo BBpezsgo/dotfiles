@@ -1,4 +1,4 @@
 #!/bin/sh
 
 killall waybar
-hyprctl dispatch exec ~/Projects/Waybar/build/waybar
+hyprctl dispatch exec waybar
