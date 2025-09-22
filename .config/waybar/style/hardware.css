@@ -10,12 +10,18 @@
 #memory {
     color: @iris;
     margin-left: 4px;
-    margin-right: 4px;
-    font-size: 0.7rem;
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+#temperature.critical {
+    color: @love;
 }
 
 #temperature {
-    color: @love;
+    color: @gold;
+    font-size: 1rem;
+    margin-right: 4px;
 }
 
 #idle_inhibitor {

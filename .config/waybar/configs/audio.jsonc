@@ -82,7 +82,7 @@
     "pulseaudio": {
         "format": "{icon}",
         "format-bluetooth": "{icon}\uf294",
-        "format-muted": "\uf6a9",
+        "format-muted": "\ueee8",
         "format-icons": {
             "headphone": "\uf025",
             "hands-free": "\uf590",

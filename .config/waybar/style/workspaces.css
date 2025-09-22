@@ -8,7 +8,11 @@
 }
 
 #workspaces button label {
-    font-size: 12px;
+    font-size: 10px;
+}
+
+#workspaces button.active label {
+    font-size: 16px;
 }
 
 #workspaces button.active,
