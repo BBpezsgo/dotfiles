@@ -23,12 +23,17 @@
     "network": {
         "tooltip": true,
         "interval": 2,
-        "format-wifi": "\uf1eb",
-        "format-ethernet": "\uf796",
-        "format-linked": "(No IP) \uf796",
-        "format-disconnected": "Disconnected \uf00d",
-        "tooltip-format": "{ipaddr}/{cidr} via {gwaddr} on {ifname}\n{bandwidthUpBits} {bandwidthDownBits}",
-        "tooltip-format-wifi": "{ipaddr}/{cidr} via {gwaddr} on {ifname}\n{essid} ({signalStrength}%)\n{bandwidthUpBits} {bandwidthDownBits}"
+        "format-icons": {
+            "wifi": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+            "ethernet": ["\uef44"],
+            "disconnected": ["\uf00d"]
+        },
+        "format-wifi": "{icon}",
+        "format-ethernet": "{icon}",
+        "format-linked": "(No IP) {icon}",
+        "format-disconnected": "Disconnected {icon}",
+        "tooltip-format": "<span color='#c4a7e7'><b>{ipaddr}</b></span>/{cidr} <span color='#908caa'>via</span> {gwaddr} <span color='#908caa'>on</span> {ifname}\n{bandwidthUpBits} {bandwidthDownBits} ({bandwidthTotalBytes})",
+        "tooltip-format-wifi": "<span color='#c4a7e7'><b>{ipaddr}</b></span>/{cidr} <span color='#908caa'>via</span> {gwaddr} <span color='#908caa'>on</span> {ifname}\n<b>{essid}</b> ({signalStrength}% • {signaldBm} dBm • {frequency} GHz)\n\uf102 {bandwidthUpBits} \uf103 {bandwidthDownBits} ({bandwidthTotalBytes})"
     },
 
     // Bluetooth
@@ -47,28 +52,17 @@
     // Memory
 
     "memory": {
-        "states": {
-            "1": 13,
-            "2": 25,
-            "3": 38,
-            "4": 50,
-            "5": 62,
-            "6": 75,
-            "7": 88,
-            "8": 100
-        },
         "format": "{icon}",
-        "format-icons": [
-            "▁",
-            "▂",
-            "▃",
-            "▄",
-            "▅",
-            "▆",
-            "▇",
-            "█"
-        ],
+        "rotate": 0,
+        //"format-icons": ["󰫃","󰫄","󰫅","󰫆","󰫇","󰫈"],
+        "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
         "tooltip-format": "RAM: {used:0.1f}/{total:0.1f} GiB\nSwap: {swapUsed:0.1f}/{swapTotal:0.1f} GiB"
+    },
+
+    "custom/ac": {
+        "exec": "if [ $(cat /sys/class/power_supply/AC/online) = 1 ]; then echo \"󰚥\"; else echo \"\"; fi",
+        "format": "{}",
+        "interval": 1
     },
 
     // Systemd
@@ -97,6 +91,19 @@
         ]
     },
 
+    "temperature": {
+        "hwmon-path": "/sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp1_input",
+        "format": "{icon}",
+        "critical-threshold": 70,
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip-format": "{temperatureC}°C"
+    },
     "temperature#0": {
         "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input",
         "format": "{icon}",
@@ -164,12 +171,13 @@
         "bat": "BAT0",
         "interval": 60,
         "states": {
+            "good": 60,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
         "tooltip-format": "Capacity: {capacity}%\nPower draw: {power} Watts\nTime: {time}\nCycles: {cycles}\nHealth: {health}%",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     // Power
